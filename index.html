@@ -55,14 +55,15 @@
                          <li><a href="#top" class="smoothScroll">Inicio</a></li>
                          <li><a href="#feature" class="smoothScroll">Art&iacute;culos</a></li>
                          <!--  <li><a href="#about" class="smoothScroll">About</a></li> -->
-                         <li><a href="#about" class="smoothScroll">Frases famosas</a></li>
+                         <li><a href="#about" class="smoothScroll">Adaptaci&oacute;n y mitigación</a></li>
+                         <li><a href="#actions" class="smoothScroll">Acciones de enfrentamiento</a></li>
                          <li><a href="#testimonial" class="smoothScroll">Nuestro equipo</a></li>
                          <li><a href="#contact" class="smoothScroll">Cont&aacute;ctanos</a></li>
                     </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
+                    <!-- <ul class="nav navbar-nav navbar-right">
                          <li><a href="tel:+5358212822"><i class="fa fa-phone"></i> +5358212822</a></li>
-                    </ul>
+                    </ul> -->
                </div>
 
           </div>
@@ -161,30 +162,37 @@
 
                     <div class="col-md-6 col-sm-12">
                          <div class="about-info">
-                              <h2>Frases c&eacute;lebres relacionadas con el cambio clim&aacute;tico</h2>
+                              <h2>Adaptaci&oacute;n y mitigación</h2>
 
                               <figure>
                                    <span><i class="fa fa-exchange"></i></span>
                                    <figcaption>
-                                        <h3>Antonio Guterres, Sec Gen ONU.</h3>
-                                        <p>Hace falta tomar ya decisiones importantes para limitar las emisiones
-                                             causantes del efecto invernadero.</p>
+                                        <h3>Adaptaci&oacute;n </h3>
+                                        <p>Prever los efectos perjudiciales del cambio climático y adoptar las medidas
+                                             apropiadas para prevenir o minimizar los daños que puedan causar, o
+                                             aprovechar las oportunidades que pueden surgir. Entre los ejemplos de
+                                             medidas de adaptación cabe mencionar cambios en infraestructuras de gran
+                                             escala, como la construcción de defensas de protección frente al aumento
+                                             del nivel del mar, así como cambios en las conductas, como que las personas
+                                             reduzcan la cantidad de residuos alimentarios que generan. En resumen, la
+                                             adaptación puede entenderse como el proceso de ajuste a los efectos
+                                             actuales y futuros del cambio climático.
+                                        </p>
                                    </figcaption>
                               </figure>
 
                               <figure>
                                    <span><i class="fa fa-certificate"></i></span>
                                    <figcaption>
-                                        <h3>Greta Thunberg</h3>
-                                        <p>No quiero que tengas esperanza, quiero que entres en pánico.</p>
-                                   </figcaption>
-                              </figure>
-
-                              <figure>
-                                   <span><i class="fa fa-bar-chart-o"></i></span>
-                                   <figcaption>
-                                        <h3>Jule Charney (1972).</h3>
-                                        <p>Si duplicamos las emisiones de CO2, la temperatura subirá 3ºC.</p>
+                                        <h3>Mitigación</h3>
+                                        <p>Hacer que los efectos del cambio climático sean menos graves evitando o
+                                             reduciendo la emisión de gases de efecto invernadero (GEI) a la atmósfera.
+                                             La mitigación se consigue reduciendo las fuentes de estos gases, por
+                                             ejemplo, incrementando la utilización de energías renovables o
+                                             estableciendo un sistema de movilidad más limpio, o bien, mejorando el
+                                             almacenamiento de estos gases, por ejemplo, incrementando la masa forestal.
+                                             En pocas palabras, la mitigación es una intervención humana que reduce las
+                                             fuentes de emisiones de GEI o mejora los sumideros.</p>
                                    </figcaption>
                               </figure>
                          </div>
@@ -203,6 +211,14 @@
 
 
 
+     <!-- FEATURE -->
+     <section id="actions">
+          <div class="container">
+               <div class="row" id="actions-container">
+
+               </div>
+          </div>
+     </section>
      <section id="testimonial">
           <div class="container">
                <div class="row">
@@ -529,7 +545,7 @@
 
                          </p>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer" >
                          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar</button>
                     </div>
                </div>
@@ -544,6 +560,7 @@
      <script>
           window.onload = () => {
                const div = document.getElementById(`team-carousel`);
+               const container = document.getElementById(`actions-container`);
                const team = [
                     {
                          name: 'Yordanis Ponce',
@@ -606,6 +623,41 @@
                               </figure>`;
                }
                div.innerHTML = html;
+               html = '';
+
+               const actions = [{
+                    title: 'PROTEGER Y RESTAURAR ECOSISTEMAS CLAVES',
+                    resume: `El respeto a la naturaleza es fundamental. Las naciones tienen en sus manos la capacidad de proteger ecosistemas claves para combatir el cambio climático: ríos, humedales, océanos, bosques y manglares absorben grandes cantidades de carbono, revirtiendo el problema. Los manglares también sirven como barrera ante las tormentas y los humedales absorben el exceso de agua de las inundaciones, ambos eventos climáticos exacerbados por el cambio climático. 
+`,
+                    photo: 'https://www.ambientum.com/wp-content/uploads/2018/03/parque-nacional-picos-de-europa-3.jpg'
+               },
+               {
+                    title: 'APOYAR A PEQUEÑOS PRODUCTORES AGRÍCOLAS',
+                    resume: `Según la FAO, la industria cárnica es respnsable del 15 al 18% de todas las emisiones de gases de efecto invernadero, superando incluso al transporte. Además, es la fuente más importante de uso y contaminación de agua en el mundo.`,
+                    photo: 'https://www.gob.mx/cms/uploads/article/main_image/58460/org-rural.jpg'
+               },
+               {
+                    title: 'PROMOVER LAS ENERGÍAS VERDES',
+                    resume: `Desconectar los aparatos electrónicos que no utilizamos ayuda a reducir la demanda de energía y, por tanto, la necesidad de generar más. Sin embargo, mientras los países apuestan por más desarrollo, también apuestan por más energía. Y 35% de las emisiones globales proviene de la producción de energía.
+`,
+                    photo: 'https://www.totalenergies.es/sites/default/files/2020-12/fuentes_renovables-electricidad-verde_0.jpg'
+               },];
+
+               for (const { title, resume, photo } of actions) {
+                    html += `<div class="col-12 col-md-4 ">
+                         <div class="card" >
+                              <img class="card-img-top" src="${photo}" alt="Card image cap" style="width: 100%;height: 200px;">
+                              <div class="card-body">
+                                   <h5 class="card-title">${title}</h5>
+                                   <p class="card-text">${resume}</p>
+                              </div>
+                         </div>
+                    </div>
+`;
+
+               }
+               container.innerHTML = html;
+
           }
      </script>
 </body>
